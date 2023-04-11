@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class InfoController {
-
     @GetMapping
     public String hello() {
         return "Application is started";
