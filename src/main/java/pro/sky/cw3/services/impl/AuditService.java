@@ -1,6 +1,6 @@
 package pro.sky.cw3.services.impl;
 
-import jdk.dynalink.Operation;
+import pro.sky.cw3.model.Operation;
 import org.springframework.stereotype.Service;
 import pro.sky.cw3.model.Socks;
 import pro.sky.cw3.model.Type;
@@ -28,6 +28,6 @@ public class AuditService {
     }
 
     public void recordOperation(Type type, Socks socks, int count) {
-        this.operations.add(new Operation(type, LocalDateTime.now(), socks, count));
+        this.operations.add(new Operation(type, LocalDateTime.now(), count, socks));
     }
 }

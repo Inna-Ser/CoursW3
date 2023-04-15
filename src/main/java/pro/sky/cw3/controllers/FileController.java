@@ -37,7 +37,7 @@ public class FileController {
         socksService.issueSocks(socksDTO);
     }
 
-    @GetMapping
+    @GetMapping("/socks")
     public int getSocksCount(@RequestParam(required = false, name = "color") Colors colors,
                              @RequestParam(required = false, name = "size") Size size,
                              @RequestParam(required = false, name = "cottonMin") Integer cottonMin,

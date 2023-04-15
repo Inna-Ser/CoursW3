@@ -15,13 +15,4 @@ public enum Size {
         this.shoeSize = shoeSize;
     }
 
-    @JsonCreator
-    public static Size convertSize(int value) {
-        for (Size size : Size.values()) {
-            if (value == size.shoeSize) {
-                return size;
-            }
-        }
-        throw new RuntimeException("This size was not found");
-    }
 }
